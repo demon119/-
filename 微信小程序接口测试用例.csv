@@ -1,0 +1,11 @@
+用例ID,模块,接口名称,请求URL,请求类型,请求参数,预期结果,是否运行,数据库结果是否验证,数据库查询语句,数据库结果变量,JSON关联表达式,JSON关联变量
+Main,首页,首页,/api/index/index,get,,"""errno"":0",n,,,,,
+Info_1,商品总数查询,商品总数查询,/api/goods/count,get,,"{""errno"":0,""errmsg"":"""",""data"":{""goodsCount"":237}}",y,y,select count(*) from nideshop_goods WHERE is_delete = 0  AND is_on_sale = 1;,db_goods_count,$.data.goodsCount,goodsCount
+login_3,历史记录与热门搜索,历史记录与热门搜索,/api/search/index,get,,"""errno"":0",n,,,,,
+login_4,登录,搜索商品列表,/api/goods/list,get,keyword=牛排&page= 1&size= 10&sort= price&order= asc&categoryId= 0," ""name"": ""铸铁珐琅牛排煎锅""",n,,,,,
+login_5,登录,分类列表,/api/goods/category,get,id=1005000,,n,,,,,
+Info_1,个人信息,商品详情,/api/goods/detail,get,id=1155000,,n,,,,,
+Cart_1,购物车,添加购物车,/api/cart/add,post,"{ ""goodsId"": 1166008, ""number"": 1,""productId"": 244}",,n,,,,,
+Cart_2,购物车,购物车,/api/cart/index,get,,,n,,,,,
+Order_1,订单,创建订单,/api/order/submit,post,"{""addressId"":3,""couponId"":0}",,n,,,,,
+Order_2,订单,我的订单,/api/order/list,get,,,n,,,,,
