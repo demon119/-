@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name='PerformanceTest'>
 	<!-- ant-jmeter.jar comes with jmeter, be sure this is the release you have -->
-	<property name="JMETER_HOME" value="/home/itcast/apache-jmeter-5.2.1/" />
-	<property name="properties.path" value="/home/itcast/apache-jmeter-5.2.1//bin/jmeter.properties" />
+	<property name="JMETER_HOME" value="/opt/apache-jmeter-5.2.1/" />
+	<property name="properties.path" value="/opt/apache-jmeter-5.2.1//bin/jmeter.properties" />
 	<property environment="env" />
 	<path id="ant.jmeter.classpath">
 		<pathelement location="${JMETER_HOME}/extras/ant-jmeter-1.1.1.jar" />
