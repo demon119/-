@@ -39,5 +39,5 @@
 	</target>
 	
 	<target name="all" depends="test"/> 
-	--></span>
+	-->
 </project>
